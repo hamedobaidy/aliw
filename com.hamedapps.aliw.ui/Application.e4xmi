@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="ASCII"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_NKaGoIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.application">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_RVaHcIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.trimmedwindow.0" label="Aliw - hamedapps.com" x="100" y="100" width="800" height="600"/>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_NKaGoIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_RVaHcIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.trimmedwindow.0" label="Aliw - hamedapps.com" x="100" y="100" width="900" height="700">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_A15bgIhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.perspectivestack.0">
+      <children xsi:type="advanced:Perspective" xmi:id="_DIXNYIhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.perspective.progressivewave" label="Progressive Wave Properties">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_XwS6sIhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partsashcontainer.0" selectedElement="_c6-24IhVEeOqwsuXr_D6Iw" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_c6-24IhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.data" containerData="300" selectedElement="_e9aosIhVEeOqwsuXr_D6Iw">
+            <children xsi:type="basic:Part" xmi:id="_e9aosIhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.data" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.ProgressiveDataPart" label="Wave Properties" tooltip="Wave Properties"/>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_Zml4gIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partsashcontainer.1" containerData="600">
+            <children xsi:type="basic:PartStack" xmi:id="_akaysIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.0" containerData="400">
+              <children xsi:type="basic:Part" xmi:id="_bOitwIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.progressivecanvas" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.ProgressiveCanvasPart" label="Progressive Wave Presentations" tooltip="Progressive Wave Presentations"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_qBqj0IhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.1" containerData="200">
+              <children xsi:type="basic:Part" xmi:id="_q4QNkIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.progressiveresults" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.PogressiveResultsPart" label="Progressive Wave Result Data" tooltip="Progressive Wave Result Data"/>
+            </children>
+          </children>
+        </children>
+      </children>
+    </children>
+  </children>
   <addons xmi:id="_NKaGoYhAEeOnJqsrBPFSag" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_NKaGoohAEeOnJqsrBPFSag" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_NKaGo4hAEeOnJqsrBPFSag" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
