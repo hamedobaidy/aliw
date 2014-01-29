@@ -14,6 +14,9 @@
                   <tags>ViewMenu</tags>
                   <children xsi:type="menu:HandledMenuItem" xmi:id="_kaYFkIjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handledmenuitem.refresh" label="Refresh" command="_3JpoIIjiEeOEkYhOtb29Zw"/>
                 </menus>
+                <toolbar xmi:id="_QzH4gIjqEeOvDfVxMXYwkw" elementId="com.hamedapps.aliw.ui.toolbar.1">
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_SN3_QIjqEeOvDfVxMXYwkw" elementId="com.hamedapps.aliw.ui.handledtoolitem.0" label="Refresh" command="_3JpoIIjiEeOEkYhOtb29Zw"/>
+                </toolbar>
               </children>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_qBqj0IhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.1" containerData="200">
@@ -21,7 +24,9 @@
               <children xsi:type="basic:Part" xmi:id="_q4QNkIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.potentialfield" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.PotentialFieldDataPart" label="Potential Field Data" tooltip="Potential Field Data"/>
               <children xsi:type="basic:Part" xmi:id="_hLJQoIi6EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.xparticlevelocity" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.XParticleVelocityDataPart" label="X Particle Velocity" tooltip="X Particle Velocity"/>
               <children xsi:type="basic:Part" xmi:id="_wminoIi6EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.yparticlevelocity" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.YParticleVelocityDataPart" label="Y Particle Velocity" tooltip="Y Particle Velocity"/>
+              <children xsi:type="basic:Part" xmi:id="_oDKF8IjpEeOvDfVxMXYwkw" elementId="com.hamedapps.aliw.ui.part.xparticlevelocity" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.XParticleAccelerationDataPart" label="X Particle Acceleration" tooltip="X Particle Acceleration"/>
               <children xsi:type="basic:Part" xmi:id="_7MddcIi6EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.pressurefield" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.PressureFieldData" label="Pressure Field" tooltip="Pressure Field"/>
+              <children xsi:type="basic:Part" xmi:id="_6uwCYIjpEeOvDfVxMXYwkw" elementId="com.hamedapps.aliw.ui.part.yacceleration" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.YParticleAccelerationDataPart" label="Y Particle Acceleration" tooltip="Y Particle Acceleration"/>
             </children>
           </children>
         </children>
