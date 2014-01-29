@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_NKaGoIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.application">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_NKaGoIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.application">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_RVaHcIhAEeOnJqsrBPFSag" elementId="com.hamedapps.aliw.ui.trimmedwindow.0" label="Aliw - hamedapps.com" x="100" y="100" width="900" height="700">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_A15bgIhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.perspectivestack.0">
       <children xsi:type="advanced:Perspective" xmi:id="_DIXNYIhVEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.perspective.progressivewave" label="Progressive Wave Properties">
@@ -9,7 +9,12 @@
           </children>
           <children xsi:type="basic:PartSashContainer" xmi:id="_Zml4gIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partsashcontainer.1" containerData="600">
             <children xsi:type="basic:PartStack" xmi:id="_akaysIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.0" containerData="400">
-              <children xsi:type="basic:Part" xmi:id="_bOitwIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.progressivecanvas" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.ProgressiveCanvasPart" label="Progressive Wave Presentations" tooltip="Progressive Wave Presentations"/>
+              <children xsi:type="basic:Part" xmi:id="_bOitwIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.progressivecanvas" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.ProgressiveCanvasPart" label="Progressive Wave Presentations" tooltip="Progressive Wave Presentations">
+                <menus xmi:id="_h3eD8IjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.menu.0">
+                  <tags>ViewMenu</tags>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="_kaYFkIjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handledmenuitem.refresh" label="Refresh" command="_3JpoIIjiEeOEkYhOtb29Zw"/>
+                </menus>
+              </children>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_qBqj0IhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.1" containerData="200">
               <children xsi:type="basic:Part" xmi:id="_k34dkIi5EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.eta" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.EtaDataPart" label="Water surfce Levels Data" tooltip="Water surfce Levels Data"/>
@@ -22,7 +27,21 @@
         </children>
       </children>
     </children>
+    <mainMenu xmi:id="_rrJdIIjlEeOEkYhOtb29Zw" elementId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_ArPLwIjmEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.menu.file" label="&amp;File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_wIP6kIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handledmenuitem.0" label="E&amp;xit" tooltip="Exit the application" command="_ccPqAIjlEeOEkYhOtb29Zw"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_37WqgIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_6E1fgIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6n6XYIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handledtoolitem.exit" label="Exit" command="_ccPqAIjlEeOEkYhOtb29Zw"/>
+      </children>
+    </trimBars>
   </children>
+  <handlers xmi:id="_929NoIjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handler.refreshcanvas" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.RefreshCanvasHandler" command="_3JpoIIjiEeOEkYhOtb29Zw"/>
+  <handlers xmi:id="_gt5FYIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handler.exit" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.ExitHandler" command="_ccPqAIjlEeOEkYhOtb29Zw"/>
+  <commands xmi:id="_3JpoIIjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.command.refreshcanvas" commandName="Refresh"/>
+  <commands xmi:id="_ccPqAIjlEeOEkYhOtb29Zw" elementId="org.eclipse.ui.file.exit" commandName="Exit"/>
   <addons xmi:id="_NKaGoYhAEeOnJqsrBPFSag" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_NKaGoohAEeOnJqsrBPFSag" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_NKaGo4hAEeOnJqsrBPFSag" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
