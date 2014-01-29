@@ -5,9 +5,9 @@ import javax.inject.Inject;
 import javax.annotation.PostConstruct;
 import org.eclipse.swt.widgets.Composite;
 
-public class PogressiveResultsPart {
+public class PressureFieldData {
 	@Inject
-	public PogressiveResultsPart() {
+	public PressureFieldData() {
 		//TODO Your code here
 	}
 	

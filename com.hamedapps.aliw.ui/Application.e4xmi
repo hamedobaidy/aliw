@@ -12,7 +12,11 @@
               <children xsi:type="basic:Part" xmi:id="_bOitwIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.progressivecanvas" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.ProgressiveCanvasPart" label="Progressive Wave Presentations" tooltip="Progressive Wave Presentations"/>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_qBqj0IhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.partstack.1" containerData="200">
-              <children xsi:type="basic:Part" xmi:id="_q4QNkIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.progressiveresults" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.PogressiveResultsPart" label="Progressive Wave Result Data" tooltip="Progressive Wave Result Data"/>
+              <children xsi:type="basic:Part" xmi:id="_k34dkIi5EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.eta" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.EtaDataPart" label="Water surfce Levels Data" tooltip="Water surfce Levels Data"/>
+              <children xsi:type="basic:Part" xmi:id="_q4QNkIhWEeOqwsuXr_D6Iw" elementId="com.hamedapps.aliw.ui.part.potentialfield" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.PotentialFieldDataPart" label="Potential Field Data" tooltip="Potential Field Data"/>
+              <children xsi:type="basic:Part" xmi:id="_hLJQoIi6EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.xparticlevelocity" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.XParticleVelocityDataPart" label="X Particle Velocity" tooltip="X Particle Velocity"/>
+              <children xsi:type="basic:Part" xmi:id="_wminoIi6EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.yparticlevelocity" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.YParticleVelocityDataPart" label="Y Particle Velocity" tooltip="Y Particle Velocity"/>
+              <children xsi:type="basic:Part" xmi:id="_7MddcIi6EeOyyuEk4AWAVg" elementId="com.hamedapps.aliw.ui.part.pressurefield" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.part.PressureFieldData" label="Pressure Field" tooltip="Pressure Field"/>
             </children>
           </children>
         </children>

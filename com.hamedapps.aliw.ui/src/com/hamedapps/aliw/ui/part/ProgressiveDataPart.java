@@ -15,6 +15,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.custom.ScrolledComposite;
 
 public class ProgressiveDataPart {
 	private Text textT;
@@ -23,6 +24,7 @@ public class ProgressiveDataPart {
 	private Text textL;
 	private Text textSigma;
 	private Text textK;
+	private Text textComents;
 	@Inject
 	public ProgressiveDataPart() {
 		//TODO Your code here
@@ -55,15 +57,7 @@ public class ProgressiveDataPart {
 		
 		Button btnComputeWaveLength = new Button(parent, SWT.NONE);
 		btnComputeWaveLength.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
-		btnComputeWaveLength.setText("Compute Wave Length and k and sigma");
-		
-		Label lblSelectTheType = new Label(parent, SWT.WRAP);
-		lblSelectTheType.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
-		lblSelectTheType.setText("Select the type of presentation below : ");
-		
-		ComboViewer comboViewer = new ComboViewer(parent, SWT.NONE);
-		Combo combo = comboViewer.getCombo();
-		combo.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+		btnComputeWaveLength.setText("Compute Wave Length, k and sigma");
 		
 		Label lblWaveLengthl = new Label(parent, SWT.NONE);
 		lblWaveLengthl.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
@@ -85,6 +79,15 @@ public class ProgressiveDataPart {
 		
 		textK = new Text(parent, SWT.BORDER);
 		textK.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		
+		ScrolledComposite scrolledComposite = new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		scrolledComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
+		scrolledComposite.setExpandHorizontal(true);
+		scrolledComposite.setExpandVertical(true);
+		
+		textComents = new Text(scrolledComposite, SWT.BORDER | SWT.WRAP | SWT.MULTI);
+		scrolledComposite.setContent(textComents);
+		scrolledComposite.setMinSize(textComents.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 		//TODO Your code here
 	}
 	
