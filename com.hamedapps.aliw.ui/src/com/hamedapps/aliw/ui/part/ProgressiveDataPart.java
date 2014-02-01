@@ -1,21 +1,22 @@
  
 package com.hamedapps.aliw.ui.part;
 
-import javax.inject.Inject;
 import javax.annotation.PostConstruct;
-import org.eclipse.swt.widgets.Composite;
 import javax.annotation.PreDestroy;
+import javax.inject.Inject;
+
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Label;
+import org.eclipse.e4.ui.model.application.MApplication;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Combo;
-import org.eclipse.jface.viewers.ComboViewer;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+
+import com.hamedapps.aliw.model.ProgressiveWave;
 
 public class ProgressiveDataPart {
 	private Text textT;
@@ -25,14 +26,22 @@ public class ProgressiveDataPart {
 	private Text textSigma;
 	private Text textK;
 	private Text textComents;
+	
+	private ProgressiveWave wave;
+	
+	@Inject 
+	private MApplication application;
+	
 	@Inject
 	public ProgressiveDataPart() {
-		//TODO Your code here
+		wave = new ProgressiveWave();
 	}
 	
 	@PostConstruct
 	public void postConstruct(Composite parent) {
 		parent.setLayout(new GridLayout(2, false));
+		
+		application.getContext().set("wave", wave);
 		
 		Label lblWavePeriod = new Label(parent, SWT.NONE);
 		lblWavePeriod.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
@@ -55,15 +64,12 @@ public class ProgressiveDataPart {
 		textD = new Text(parent, SWT.BORDER);
 		textD.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		
-		Button btnComputeWaveLength = new Button(parent, SWT.NONE);
-		btnComputeWaveLength.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
-		btnComputeWaveLength.setText("Compute Wave Length, k and sigma");
-		
 		Label lblWaveLengthl = new Label(parent, SWT.NONE);
 		lblWaveLengthl.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 		lblWaveLengthl.setText("Wave Length (L) : ");
 		
 		textL = new Text(parent, SWT.BORDER);
+		textL.setEditable(false);
 		textL.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		
 		Label lblWaveAngularFrequency = new Label(parent, SWT.NONE);
@@ -71,6 +77,7 @@ public class ProgressiveDataPart {
 		lblWaveAngularFrequency.setText("Wave Angular Frequency : ");
 		
 		textSigma = new Text(parent, SWT.BORDER);
+		textSigma.setEditable(false);
 		textSigma.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		
 		Label lblWaveNumberk = new Label(parent, SWT.NONE);
@@ -78,6 +85,7 @@ public class ProgressiveDataPart {
 		lblWaveNumberk.setText("Wave Number (k) : ");
 		
 		textK = new Text(parent, SWT.BORDER);
+		textK.setEditable(false);
 		textK.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		
 		ScrolledComposite scrolledComposite = new ScrolledComposite(parent, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
@@ -88,9 +96,25 @@ public class ProgressiveDataPart {
 		textComents = new Text(scrolledComposite, SWT.BORDER | SWT.WRAP | SWT.MULTI);
 		scrolledComposite.setContent(textComents);
 		scrolledComposite.setMinSize(textComents.computeSize(SWT.DEFAULT, SWT.DEFAULT));
-		//TODO Your code here
 	}
 	
+	
+	public boolean updateWaveProperties() {
+		try {
+			double t = Double.parseDouble(textT.getText());
+			double d = Double.parseDouble(textD.getText());
+			double h = Double.parseDouble(textH.getText());
+			wave = new ProgressiveWave(t, d, h);
+			application.getContext().set("wave", wave);
+
+			textSigma.setText(Double.toString(wave.getS()));
+			textK.setText(Double.toString(wave.getK()));
+			textL.setText(Double.toString(wave.getL()));
+		} catch(NumberFormatException nfex) {
+			return false;
+		}
+		return true;
+	}
 	
 	@PreDestroy
 	public void preDestroy() {
@@ -100,13 +124,27 @@ public class ProgressiveDataPart {
 	
 	@Focus
 	public void onFocus() {
-		//TODO Your code here
+		textT.setFocus();
 	}
 	
 	
 	@Persist
 	public void save() {
 		//TODO Your code here
+	}
+
+	/**
+	 * @return the wave
+	 */
+	public ProgressiveWave getWave() {
+		return wave;
+	}
+
+	/**
+	 * @param wave the wave to set
+	 */
+	public void setWave(ProgressiveWave wave) {
+		this.wave = wave;
 	}
 	
 }

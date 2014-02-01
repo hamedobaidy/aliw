@@ -5,3 +5,4 @@ Bundle-SymbolicName: com.hamedapps.aliw.model
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: HAMEDAPPS
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: com.hamedapps.aliw.model
