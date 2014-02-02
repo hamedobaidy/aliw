@@ -31,10 +31,31 @@
           </children>
         </children>
       </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_zZ-fsIvHEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.perspective.standingwave" label="Standing Wave">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_2yR4QIvHEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.partsashcontainer.2" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_DAb3MIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.partstack.2">
+            <children xsi:type="basic:Part" xmi:id="_46dswIvHEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.part.standingdata" label="Standing Wave Properties"/>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_AynUwIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.partsashcontainer.3">
+            <children xsi:type="basic:PartStack" xmi:id="_JUB8MIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.partstack.3">
+              <children xsi:type="basic:Part" xmi:id="_LAQNcIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.part.standingchart" label="Standing Wave Presentations"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_KO63IIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.partstack.4">
+              <children xsi:type="basic:Part" xmi:id="_RFlM8IvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.part.standingeta" label="Standing Wave Water Surface Level Data"/>
+            </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_q88sMIvLEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.perspective.partialstandingwave" label="Partial Standing Wave"/>
     </children>
     <mainMenu xmi:id="_rrJdIIjlEeOEkYhOtb29Zw" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_ArPLwIjmEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.menu.file" label="&amp;File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_wIP6kIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handledmenuitem.0" label="E&amp;xit" tooltip="Exit the application" command="_ccPqAIjlEeOEkYhOtb29Zw"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_rZRjMIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.menu.view" label="&amp;View">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_f77gsIvJEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.handledmenuitem.showprogressivewave" label="Progressive Wave" tooltip="Show progressive wave perspective" command="_TikXUIvJEeOYIspy6P7chQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_uGpIYIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.handledmenuitem.1" label="Standing Wave" tooltip="Show standing wave properties" command="_bRzwYIvIEeOYIspy6P7chQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_WkAnsIvMEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.handledmenuitem.showpartialstandingwave" label="Partial Standing Wave" tooltip="Show partial standing wave" command="_yUaB8IvLEeOYIspy6P7chQ"/>
       </children>
     </mainMenu>
     <trimBars xmi:id="_37WqgIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.trimbar.0">
@@ -45,8 +66,14 @@
   </children>
   <handlers xmi:id="_929NoIjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handler.refreshcanvas" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.RefreshCanvasHandler" command="_3JpoIIjiEeOEkYhOtb29Zw"/>
   <handlers xmi:id="_gt5FYIjlEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.handler.exit" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.ExitHandler" command="_ccPqAIjlEeOEkYhOtb29Zw"/>
+  <handlers xmi:id="_fh33YIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.handler.showstandingwave" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.ShowSatandingWaveHandler" command="_bRzwYIvIEeOYIspy6P7chQ"/>
+  <handlers xmi:id="_X68FwIvJEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.handler.showprogressivewave" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.ShowProgressiveWaveHandler" command="_TikXUIvJEeOYIspy6P7chQ"/>
+  <handlers xmi:id="_4miuYIvLEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.handler.showpartialstandingwave" contributionURI="bundleclass://com.hamedapps.aliw.ui/com.hamedapps.aliw.ui.handler.ShowPartialStandingWaveHandler" command="_yUaB8IvLEeOYIspy6P7chQ"/>
   <commands xmi:id="_3JpoIIjiEeOEkYhOtb29Zw" elementId="com.hamedapps.aliw.ui.command.refreshcanvas" commandName="Refresh"/>
   <commands xmi:id="_ccPqAIjlEeOEkYhOtb29Zw" elementId="org.eclipse.ui.file.exit" commandName="Exit"/>
+  <commands xmi:id="_bRzwYIvIEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.command.showstandingwave" commandName="Show Standing Wave"/>
+  <commands xmi:id="_TikXUIvJEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.command.showprogressivewave" commandName="Show Progressive Wave"/>
+  <commands xmi:id="_yUaB8IvLEeOYIspy6P7chQ" elementId="com.hamedapps.aliw.ui.command.showpartialstandingwave" commandName="Show Partial Standing Wave"/>
   <addons xmi:id="_NKaGoYhAEeOnJqsrBPFSag" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_NKaGoohAEeOnJqsrBPFSag" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_NKaGo4hAEeOnJqsrBPFSag" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
